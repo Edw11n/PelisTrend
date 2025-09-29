@@ -8,7 +8,7 @@ const carousel = document.getElementById("carousel");
 async function loadCatalogo() {
     try {
     const res = await fetch(
-        `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=es-ES&page=1`
+        `${BASE_URL}/movie/upcoming?api_key=${API_KEY}&language=es-ES&page=1`
     );
     const data = await res.json();
 
