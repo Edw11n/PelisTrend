@@ -13,8 +13,13 @@ const themeToggle = document.getElementById("themeToggle");
 const movieList = document.getElementById("movieList");
 const movieDetail = document.getElementById("movieDetail");
 const detailContent = document.getElementById("detailContent");
+const headerTitle = document.querySelector("header h1");
 
 // FUNCIONES
+// Recargar pagina
+headerTitle.addEventListener("click", () => {
+    location.reload();
+});
 // Cargar peliculas por defecto
 async function getPopularMovies() {
     const res = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=es-ES&page=1`);
@@ -33,6 +38,7 @@ async function searchMovies(query) {
     const data = await res.json();
     renderMovies(data.results);
 }
+
 // Cargar generos para el filtro
 async function loadGenres() {
     const res = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=es-ES`);
