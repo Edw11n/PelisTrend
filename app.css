@@ -119,6 +119,8 @@ nav a {
     overflow: hidden;
     transition: transform 0.3s;
     cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
 }
 .movie-card:hover {
     transform: scale(1.05);
@@ -127,12 +129,10 @@ nav a {
     width: 100%;
     display: block;
 }
-.movie-info {
-    padding: 0.5rem;
-}
-.movie-info h3 {
+.movie-card h3 {
     font-size: 1rem;
     margin-bottom: 0.3rem;
+    padding: 0.5rem;
 }
 .movie-info p {
     font-size: 0.8rem;

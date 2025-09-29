@@ -1,0 +1,144 @@
+:root {
+--main-color: #e50914;
+--dark-bg: #141414;
+--light-bg: #f5f5f5;
+--text-light: #fff;
+--text-dark: #111;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+font-family: Arial, sans-serif;
+background: var(--dark-bg);
+color: var(--text-light);
+line-height: 1.6;
+}
+header {
+text-align: center;
+padding: 3rem 1rem;
+background: url('https://image.tmdb.org/t/p/original/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg') 
+            no-repeat center top / cover;
+position: relative;
+}
+header::after {
+content: "";
+position: absolute;
+top:0; left:0; right:0; bottom:0;
+background: rgba(0,0,0,0.6);
+}
+header .content {
+position: relative;
+z-index: 1;
+}
+header h1 {
+font-size: 3rem;
+color: var(--main-color);
+}
+header p {
+margin: 1rem 0;
+font-size: 1.2rem;
+}
+.btn {
+display: inline-block;
+background: var(--main-color);
+color: #fff;
+padding: 0.8rem 1.5rem;
+border: none;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+transition: background 0.3s;
+}
+.btn:hover {background: #b00610;}
+
+/* Beneficios */
+.benefits {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+gap: 1rem;
+padding: 3rem 1rem;
+background: var(--light-bg);
+color: var(--text-dark);
+text-align: center;
+}
+.benefit {
+background: #fff;
+border-radius: 8px;
+padding: 2rem;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Carrusel */
+.catalog {
+padding: 3rem 1rem;
+text-align: center;
+}
+.carousel {
+display: flex;
+overflow-x: auto;
+gap: 1rem;
+scroll-behavior: smooth;
+padding: 1rem;
+}
+.carousel::-webkit-scrollbar {display: none;}
+.movie {
+flex: 0 0 auto;
+width: 200px;
+border-radius: 8px;
+overflow: hidden;
+background: #222;
+}
+.movie img {
+width: 100%;
+display: block;
+}
+.movie p {
+padding: 0.5rem;
+font-size: 0.9rem;
+}
+
+/* Llamado final */
+.cta-final {
+text-align: center;
+padding: 3rem 1rem;
+background: #000;
+}
+.cta-final h2 {
+color: var(--main-color);
+margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+text-align: center;
+padding: 1rem;
+background: #111;
+font-size: 0.9rem;
+}
+footer a {
+color: var(--main-color);
+text-decoration: none;
+}
+
+/* Responsive */
+/* Tablets y laptops pequeñas */
+@media(max-width:1024px) {
+    header {
+        background-position: center top;
+        background-size: cover;
+        background-color: #000;
+    }
+}
+/* Móviles */
+@media (max-width: 768px) {
+    header {
+        background-position: center top;
+        background-size: cover;
+        background-color: #000;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .movie {
+        width: 150px;
+    }
+}

@@ -1,68 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PelisTrend</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PelisTrend</title>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>🎬PelisTrend🍿</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Populares</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        <button id="themeToggle">🌙</button>
-    </header>
 
-    <!-- Buscador -->
-    <section class="search-section">
-        <input type="text" id="searchInput" placeholder="Buscar película...">
-        <button id="searchBtn">Buscar</button>
-    </section>
+<!-- Encabezado -->
+<header>
+    <div class="content">
+    <h1>PelisTrend</h1>
+    <p>Descubre trailers, conoce lo nuevo y vive el cine desde otra perspectiva.</p>
+    <a href="./app.html" class="btn">Explorar ahora</a>
+    </div>
+</header>
 
-    <!-- Filtros -->
-    <section class="filters">
-        <select id="genreFilter">
-            <option value="">Todos los géneros</option>
-        </select>
+<!-- Beneficios -->
+<section class="benefits">
+    <div class="benefit">
+    <h3>🎬 Catálogo Actualizado</h3>
+    <p>Explora lo último en estrenos y próximos lanzamientos.</p>
+    </div>
+    <div class="benefit">
+    <h3>📺 Trailers Oficiales</h3>
+    <p>Disfruta de los trailers más recientes en alta calidad.</p>
+    </div>
+    <div class="benefit">
+    <h3>⭐ Tendencias</h3>
+    <p>Conoce qué está siendo tendencia en el mundo del cine.</p>
+    </div>
+</section>
 
-        <input type="number" id="yearFilter" placeholder="Año" min="1900" max="2099">
+<!-- Muestra catálogo -->
+<section id="catalogo" class="catalog">
+    <h2>Descubre lo que viene</h2>
+    <p>Mira un adelanto de nuestro catálogo de trailers</p>
+    <div class="carousel" id="carousel"> </div>
+</section>
 
-        <select id="sortFilter">
-            <option value="popularity.desc">Más populares</option>
-            <option value="vote_average.desc">Mejor valoradas</option>
-            <option value="release_date.desc">Más recientes</option>
-        </select>
-    </section>
+<!-- CTA final -->
+<section class="cta-final">
+    <h2>¿Listo para vivir el cine?</h2>
+    <p>Descubre lo mejor de las películas y sus trailers en un solo lugar.</p>
+    <a href="./app.html" class="btn">Comienza ahora</a>
+</section>
 
-    <!-- Contenedor de películas -->
-    <main>
-        <section id="movieList"></section>
-        <section id="movieDetail" class="hidden">
-            <div id="detailContent"></div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>
-        Desarrollado usando la API de 
-            <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">
-                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" 
-                alt="TMDB Logo" class="tmdb-logo">
-            </a>
-        </p>
-    </footer>
-
-
-    <!-- Script -->
-    <script src="script.js"></script>
-
+<!-- Footer -->
+<footer>
+    <p>Hecho con ❤️ usando la API de <a href="https://www.themoviedb.org/" target="_blank">TMDB</a></p>
+</footer>
+<script src="index.js"></script>
 </body>
 </html>
