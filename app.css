@@ -159,13 +159,14 @@ color: var(--font-color);
 /* Lista de Películas */
 #movieList {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(180px, 250px));
 gap: 1.5rem;
 padding: 2rem;
 }
 
 /* 🃏 Tarjeta de película */
 .movie-card {
+max-width: 250px;
 background: var(--movie-card-bg-color);
 border-radius: 10px;
 overflow: hidden;
