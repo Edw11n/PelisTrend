@@ -13,7 +13,7 @@ async function loadCatalogo() {
     const data = await res.json();
 
     carousel.innerHTML = data.results
-        .slice(0, 8)
+        .slice(0, 15)
         .map(
         (movie) => `
             <div class="movie">
