@@ -31,7 +31,7 @@ async function getPopularMovies() {
 // Buscar peliculas
 async function searchMovies(query) {
     if (!query.trim()) {
-        alert("Por favor ingresa un término válido.");
+        await getPopularMovies();
         return;
     }
     const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&language=es-ES&query=${query}`);
